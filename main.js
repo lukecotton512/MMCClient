@@ -12,17 +12,6 @@ function calculateClicked() {
         // Our url.
         url: url,
 
-        // Type of JSONP.
-        jsonp: "callback",
-
-        // We are JSONP.
-        dataType: "jsonp",
-
-        // Say we want jsonp to the server.
-        data: {
-            reqType: "jsonp"
-        },
-
         // Success function.
         success: function(data) {
             // Unhide the results.
