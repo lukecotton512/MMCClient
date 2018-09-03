@@ -27,9 +27,24 @@ function calculateClicked() {
         success: function(data) {
             // Unhide the results.
             $("#result-group").css("display", "block");
+
+            // Hide the failure reason.
+            $("#error-group").css("display", "none");
             
             // Now, print the result.
             $("#result-field").html(data.weight.toFixed(3) + " g/mol");
+        },
+
+        // Failure function.
+        error: function(data) {
+            // Hide the results.
+            $("#result-group").css("display", "none");
+
+            // Show the failure reason.
+            $("#error-group").css("display", "block");
+
+            // Now, show an error message.
+            $("#failure-reason").html("Could not get molar mass!");
         }
     });
 }

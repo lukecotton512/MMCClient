@@ -13,6 +13,10 @@
     display: none;
 }
 
+#error-group {
+    display: none;
+}
+
 #calculateButton {
     margin-top: 20px;
 }
