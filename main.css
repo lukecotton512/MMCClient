@@ -1,0 +1,18 @@
+/*
+    main.css
+    Luke Cotton
+    Main CSS file for the molar mass calculator.
+*/
+
+#calculate-group {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#result-group {
+    display: none;
+}
+
+#calculateButton {
+    margin-top: 20px;
+}
