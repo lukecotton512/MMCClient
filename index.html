@@ -17,33 +17,21 @@
     <nav class="navbar navbar-expand-sm bg-dark">
         <span class="navbar-brand text-white">Molar Mass Calculator</span>
     </nav>
-    <div class="container-fluid">
-        <div class="row">
-        </div>
-        <div class="row">
-            <div class="col-md-3">
+    <div id="main-container" class="container-fluid">
+        <noscript>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-9">
+                    <div class="noscript-container">
+                        <h1>Enable Javascript</h1>
+                        <p class="text-danger">
+                            The Molar Mass Calculator requires JavaScript. Please enable Javascript.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
             </div>
-            <div class="col-md-6">
-                <div class="form-group" id="calculate-group">
-                    <h1 class="text-center">Formula</h1>
-                    <input type="text" id="formulaField" name="formulaField" 
-                            class="form-control form-control-lg text-center" 
-                            placeholder="Enter a formula here"/>
-                    <button class="btn btn-success btn-lg btn-block" id="calculateButton">
-                        Calculate
-                    </button>
-                </div>
-                <div class="text-center" id="error-group">
-                    <p id="failure-reason" class="text-danger"></p>
-                </div>
-                <div class="text-center" id="result-group">
-                    <h3>Result</h3>
-                    <p id="result-field"></p>
-                </div>
-                </div>
-            <div class="col-md-3">
-            </div>
-        </div>
+        </noscript>
     </div>
 </body>
 </html>

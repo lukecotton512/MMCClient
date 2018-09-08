@@ -40,7 +40,17 @@ function calculateClicked() {
 
 // Setup everything.
 $(document).ready(function() {
-    $("#calculateButton").click(function() {
-        calculateClicked();
+    // Get the main page.
+    var container = $("#main-container");
+    container.hide();
+    container.load("maincontent.html", function() {
+        // Setup the button.
+        $("#calculateButton").click(function() {
+            calculateClicked();
+        });
+
+        // Show the container with an animation.
+        container.fadeIn(1000);
     });
+
 });
