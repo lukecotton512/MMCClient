@@ -44,9 +44,20 @@ $(document).ready(function() {
     var container = $("#main-container");
     container.hide();
     container.load("maincontent.html", function() {
+        // Load the current formula if we have it.
+        var formula = scdcookie.getCookie("currentFormula");
+        if (formula != null) {
+            $("#formulaField").val(formula);
+        }
+
         // Setup the button.
         $("#calculateButton").click(function() {
             calculateClicked();
+        });
+
+        // When the text changes, update our cookie.
+        $("#formulaField").keyup(function () {
+            scdcookie.setCookie("currentFormula", $("#formulaField").val());
         });
 
         // Show the container with an animation.
