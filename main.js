@@ -5,7 +5,7 @@
 // Function for our button click.
 function calculateClicked() {
     // Calculate.
-    const baseURL = "http://localhost:3000/calculate/";
+    const baseURL = "http://localhost:3001/calculate/";
     var formula = $("#formulaField").val();
     var url = baseURL + formula;
     $.ajax({
