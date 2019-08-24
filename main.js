@@ -33,7 +33,9 @@ function calculateClicked() {
             $("#error-group").css("display", "block");
 
             // Now, show an error message.
-            $("#failure-reason").html("Could not get molar mass!");
+            var responseData = data.responseJSON;
+            var errorMessage = responseData.message || "Unknown error!";
+            $("#failure-reason").html("Error: " + errorMessage);
         }
     });
 }
